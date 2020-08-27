@@ -9,6 +9,7 @@
         android:id="@+id/rim1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
         android:background="#C0C0C0"></FrameLayout>
 
 
@@ -33,6 +34,7 @@
         android:layout_centerHorizontal="true"
         android:alpha="0.1"
         android:background="#FF000000" />
+
     <com.huawei.hms.scankit.ViewfinderView
         android:id="@+id/viewfinderView"
         android:layout_width="match_parent"
@@ -42,18 +44,24 @@
         my_view:scankit_frameColor="#00FFFFFF"
         my_view:scankit_labelText="@string/scankit_scan_tip"
         my_view:scankit_labelTextColor="#FFFFFF"
-        my_view:scankit_labelTextSize="12sp"
+        my_view:scankit_labelTextSize="12sp" />
 
-        />
-
+    <ImageView
+        android:id="@+id/point"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="gone" />
     <!--  customize scanning viewfinder  -->
     <ImageView
         android:id="@+id/scan_view_finder"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_centerInParent="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/scanningframe" />
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/scankit_photo" />
 
 
 </RelativeLayout>
