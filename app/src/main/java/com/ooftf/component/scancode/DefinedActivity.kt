@@ -37,9 +37,9 @@ class DefinedActivity : AppCompatActivity() {
                     point.visibility = View.VISIBLE
                     val layoutParams = point.layoutParams as RelativeLayout.LayoutParams
                     layoutParams.topMargin =
-                        (result.borderRect.centerY() * resources.displayMetrics.heightPixels / 1920) - (layoutParams.height / 2)
+                        (result.borderRect.centerY() * remoteView.height / 1920) - (layoutParams.height / 2)
                     layoutParams.leftMargin =
-                        (result.borderRect.centerX() * resources.displayMetrics.widthPixels / 1080) - (layoutParams.width / 2)
+                        (result.borderRect.centerX() * remoteView.width / 1080) - (layoutParams.width / 2)
                     result.describeContents()
                     point.requestLayout()
                     putExtra(ScanUtil.RESULT, result)
